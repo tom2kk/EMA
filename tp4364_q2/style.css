@@ -155,3 +155,30 @@ footer{
   border-radius: 5px;
   margin-bottom: 10px;
 }
+
+.submit{
+  background-color: #2C3E50;
+  color: white;
+  margin: 0 auto;
+
+}
+
+input{
+  margin-left: 20px;
+  border: 1px solid #2C3E50;
+  min-width: 200px;
+  min-height: 30px;
+  border-radius: 5px;
+  padding-left: 4px;
+
+}
+
+form > label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}​
+
+form{
+  background-color: red;
+}
