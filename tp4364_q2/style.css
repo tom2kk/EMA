@@ -75,3 +75,34 @@ footer{
   height: 40px;
   padding-top: 20px;
 }
+
+#main{
+  margin-top: 10px;
+}
+
+.display-sections{
+  width: 99.4%;
+  height: 200px;
+  margin: 0, auto;
+  background-color: auto;
+  border: 3px solid #2C3E50;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.plus-button{
+  float:left;
+  margin-left: 6px;
+  width: 5%;
+  font-size: 20px;
+  color: #2C3E50
+}
+
+.section-title{
+  width: 90%;
+  line-height: 1em;
+  text-align: center;
+  float:left;
+  font-size: 20px;
+  color: #2C3E50;
+}
