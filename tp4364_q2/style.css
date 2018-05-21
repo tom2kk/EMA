@@ -80,9 +80,10 @@ footer{
   margin-top: 10px;
 }
 
-.display-sections{
+.view-display-sections{
   width: 99.4%;
-  height: 200px;
+  min-height: 26px;
+  height: auto;
   margin: 0, auto;
   background-color: auto;
   border: 3px solid #2C3E50;
@@ -91,18 +92,66 @@ footer{
 }
 
 .plus-button{
-  float:left;
-  margin-left: 6px;
-  width: 5%;
+  margin-right: 6px;
   font-size: 20px;
-  color: #2C3E50
+  color: #2C3E50;
+  width: 10px;
+  float:right;
 }
 
 .section-title{
-  width: 90%;
+  width: 100%;
   line-height: 1em;
   text-align: center;
-  float:left;
+  float:right;
   font-size: 20px;
   color: #2C3E50;
+}
+#view-display-content{
+  height: 30px;
+  width: 95%;
+  color: #2C3E50;
+  display: none;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+#view-show-menu {
+  display: none;
+}
+#view-show-menu:checked + #view-display-content{
+  display: block;
+  height: auto;
+}
+
+#add-display-content{
+  height: 30px;
+  width: 95%;
+  color: #2C3E50;
+  display: none;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+#add-show-menu {
+  display: none;
+}
+#add-show-menu:checked + #add-display-content{
+  display: block;
+  height: auto;
+}
+
+.add-display-sections{
+  width: 99.4%;
+  min-height: 26px;
+  height: auto;
+  margin: 0, auto;
+  background-color: auto;
+  border: 3px solid #2C3E50;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
