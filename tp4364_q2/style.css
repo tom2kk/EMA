@@ -1,0 +1,77 @@
+*{
+  font-family: 'Lato', sans-serif;
+}
+
+#logo-image{
+  width: 1.2em;
+  height: 1.4em;
+  float: left;
+  margin-bottom: 5px;
+  margin-top: auto;
+  padding-right: 5px;
+}
+
+#content{
+  width: 80%;
+  background-color: white;
+  margin: 0 auto;
+}
+
+#header{
+  text-align: left;
+  background-color: white;
+  height: 37.5px;
+}
+
+#head{
+  margin-left: 10px;
+  padding-top: 10px;
+  font-size: 20px;
+  background-color: #2C3E50;
+  width: 165spx;
+  height: 30px;
+  color: white;
+  float: left;
+}
+
+#link-bar{
+  height: 3em;
+  width: 100%;
+  background-color: #2C3E50;
+  color: white;
+  border-radius: 5px;
+}
+
+#menu1{
+  float: left;
+  padding-top: 12px;
+}
+
+#menu2{
+  float: right;
+  padding-top: 12px;
+}
+
+a:link{
+  text-decoration: none;
+  color: white;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+a:hover{
+  color: #18BC9C;
+}
+
+footer{
+  width: 80%;
+  background-color: white;
+  margin: 0 auto;
+  color: #2C3E50;
+}
+
+#social-media{
+  width: 307px;
+  height: 40px;
+  padding-top: 20px;
+}
