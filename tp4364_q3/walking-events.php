@@ -108,12 +108,26 @@
         </form>
       </div>
     </div>
-
-
-
-
   </div>
 </div>
+
+<?php
+  $db = new SQLite3('walkingclub.sqlite');
+
+  if (isset($_POST['walkname'] ) && !empty($_POST['walkname'] )){
+    $id = $_POST['id'];
+    $date = $_POST['date'];
+    $starttime = $_POST['starttime'];
+    $leader = $_POST['leader'];
+    $meetingpoint = $_POST['meetingpoint'];
+    $meetinglatlong = $_POST['meetinglatlong'];
+    $distance = $_POST['distance'];
+    $route = $_POST['route'];
+    $notes = $_POST['notes'];
+    $status = $_POST['status'];
+
+  }
+?>
 
 <footer>
   <img id="social-media" src="social-media.png" alt="">
