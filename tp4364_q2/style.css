@@ -28,7 +28,7 @@
   padding-top: 10px;
   font-size: 20px;
   background-color: #2C3E50;
-  width: 165spx;
+
   height: 30px;
   color: white;
   float: left;
@@ -63,6 +63,14 @@ a:hover{
   color: #18BC9C;
 }
 
+a:visited {
+  color: white;
+}
+
+a:visited:hover {
+  color: #18BC9C;
+}
+
 footer{
   width: 80%;
   background-color: white;
@@ -84,11 +92,11 @@ footer{
   width: 99.4%;
   min-height: 26px;
   height: auto;
-  margin: 0, auto;
-  background-color: auto;
+  margin: 0 auto;
   border: 3px solid #2C3E50;
   border-radius: 5px;
   margin-bottom: 10px;
+  padding-top: 2px;
 }
 
 .plus-button{
@@ -140,6 +148,7 @@ footer{
 #add-show-menu {
   display: none;
 }
+
 #add-show-menu:checked + #add-display-content{
   display: block;
   height: auto;
@@ -149,17 +158,18 @@ footer{
   width: 99.4%;
   min-height: 26px;
   height: auto;
-  margin: 0, auto;
-  background-color: auto;
+  margin: 0 auto;
   border: 3px solid #2C3E50;
   border-radius: 5px;
   margin-bottom: 10px;
+  padding-top: 2px;
+
 }
 
 .submit{
   background-color: #2C3E50;
   color: white;
-  margin: 0 auto;
+
 
 }
 
@@ -179,6 +189,35 @@ form > label {
   text-align: right;
 }​
 
-form{
-  background-color: red;
+#form{
+  display: inline-block;
+  text-align: center;
+}
+
+
+#sessionID{
+  display: none;
+}
+
+#main-menu-checkbox{
+  display: none;
+}
+
+#main-menu-checkbox-label{
+  display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  #link-bar {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, 100%);
+  }
+  #link-bar{
+    height: auto;
+  }
+
+  input{
+    width:auto;
+  }
 }

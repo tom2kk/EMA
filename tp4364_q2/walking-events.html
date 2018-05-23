@@ -22,13 +22,15 @@
     <div id="head">
       <img id="logo-image" src="logo3.png" alt="">
       OU Running Club |</div>
-    <div id="menu1">
-      <a href="main.html">Home</a>
-      <a href="admin-main.html">Admin</a>
-    </div>
-    <div id="menu2">
-      <a href="login.html">Login</a>
-      <a href="register.html">Register</a>
+      <div id="show-main-menu">
+        <div id="menu1">
+          <a href="main.html">Home</a>
+          <a href="admin-main.html">Admin</a>
+        </div>
+        <div id="menu2">
+          <a href="login.html">Login</a>
+          <a href="register.html">Register</a>
+        </div>
     </div>
   </div>
 
@@ -36,12 +38,14 @@
 
   <div id=main>
     <div id="view-section" class="view-display-sections">
-      <label for="view-show-menu" class="display-menu">
+
         <div class="section-title">
           <div class="plus-button">+</div>
+          <label for="view-show-menu" class="display-menu">
           View All Walking Events
+          </label>
         </div>
-      </label>
+
         <input id="view-show-menu" type="checkbox" value="button">
 
 
@@ -52,42 +56,46 @@
     </div>
 
     <div id="add-section" class="add-display-sections">
-      <label for="add-show-menu" class="display-menu">
+
         <div class="section-title">
           <div class="plus-button">+</div>
+          <label for="add-show-menu" class="display-menu">
           Add Walking Events
+          </label>
         </div>
-      </label>
+
         <input id="add-show-menu" type="checkbox" value="button">
 
 
       <div id="add-display-content">
         <form id="form" action="/action_page.php">
-          <label for="walkname">Walk name:</label>
+          <br>
+          <input id="sessionID" type="text" name="sessionID" value="ABCDEF012345">
+          <label>Walk name:</label>
           <input type="text" name="walkname" value="">
           <br><br>
-          <label for="date">Date:</label>
+          <label>Date:</label>
           <input type="date" name="date" value="">
           <br><br>
-          <label for="starttime">Start time:</label>
+          <label>Start time:</label>
           <input type="time" name="starttime" value="">
           <br><br>
-          <label for="leader">Leader:</label>
+          <label>Leader:</label>
           <input type="text" name="leader" value="">
           <br><br>
-          <label for="meetingpoint">Meeting point:</label>
+          <label>Meeting point:</label>
           <input type="text" name="meetingpoint" value="">
           <br><br>
-          <label for="distance">Distance (miles):</label>
+          <label>Distance (miles):</label>
           <input type="number" name="distance" value="">
           <br><br>
-          <label for="route">Route:</label>
+          <label>Route:</label>
           <input type="text" name="route" value="">
           <br><br>
-          <label for="notes">Notes:</label>
+          <label>Notes:</label>
           <input type="text" name="notes" value="">
           <br><br>
-          <label for="status">Status:</label>
+          <label>Status:</label>
           <input type="checkbox" name="status" value="">
           <br><br>
           <input class="submit" type="submit" value="Submit">
@@ -100,8 +108,10 @@
 
   </div>
 </div>
-</body>
+
 <footer>
   <img id="social-media" src="social-media.png" alt="">
 </footer>
+</body>
+
 </html>
