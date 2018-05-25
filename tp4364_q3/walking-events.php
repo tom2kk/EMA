@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,9 +70,6 @@
         <form id="form" action="insert.php" method="post">
           <br>
           <input id="sessionID" type="text" name="sessionID" value="ABCDEF012345">
-          <label>ID:</label>
-          <input type="text" name="id" value="">
-          <br><br>
           <label>Walk name:</label>
           <input type="text" name="walkname" value="">
           <br><br>

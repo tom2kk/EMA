@@ -1,0 +1,118 @@
+body{
+  font-family: sans-serif;
+  color: white;
+}
+h2{
+  margin-left: 10%;
+}
+
+#heading{
+  background: orange;
+  width: 100%;
+  height: 2em;
+  text-align: center;
+  padding-top: 1em;
+  font-size: 20px;
+
+}
+
+#menu{
+  background: #eee;
+  text-align: center;
+
+}
+
+#main-area{
+  padding-top: 2em;
+  background: #4CAF50;
+  width: 100%;
+  height: auto;
+
+}
+
+.menu-button{
+  padding-top: 4px;
+  padding-bottom: 4px;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+}
+
+input, label{
+
+  margin-bottom: 25px;
+  margin-left: 10%;
+}
+
+#input-definition, #edit-definition{
+  width: 80%;
+  height: 8em;
+  align-items: center;
+}
+
+#search-definition{
+  width: 80%;
+  min-height: 8em;
+  max-height: auto;
+  margin-left: 10%;
+  background-color: #eee;
+  word-break: break-all;
+  color: black;
+}
+
+.input-submit{
+  width: 10em;
+  height: 3em;
+  border-radius: 10px;
+  border-style: none;
+  border: 0px;
+  background: orange;
+
+}
+
+#delete-submit{
+  margin-left: 8%;
+}
+
+#delete-submit{
+  width: 6em;
+  height: 2em;
+  border-radius: 10px;
+  border-style: none;
+  border: 0px;
+  background: orange;
+
+}
+
+.vertical-menu {
+    width: 100%;
+    border-color: black;
+    border-bottom: 1px;
+}
+
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+@media screen and (min-width: 500px) {
+  .vertical-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+}

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,12 +38,9 @@
   <div id=main>
     <?php
     define('ISITSAFETORUN', TRUE);
-
     $database_name = "walkingclub.sqlite";
     $db = new SQLite3($database_name);
-
     if (isset($_POST['walkname'])){
-      $id = $_POST['id'];
       $walkname = $_POST['walkname'];
       $walkdate = $_POST['date'];
       $starttime = $_POST['starttime'];
@@ -56,18 +52,47 @@
       $notes = $_POST['notes'];
       $status = $_POST['status'];
     }
-
-    $sql= INSERT INTO 'walk' VALUES ($id, $walkname, $walkdate , $starttime , $leader , $meetingpoint , $meetinglatlong , $distance , $route , $notes , $status);
+    $sql= "INSERT INTO `walk`(`name`,`walk_date`,`start_time`,`leader`,`meeting_point`,`meeting_latlong`,`distance`,`route`,`notes`,`status`) VALUES ('$walkname','$walkdate','$starttime','$leader','$meetingpoint','$meetinglatlong','$distance','$route','$notes','$status');";
     $db->exec($sql) or die('Add data failed');
-
     echo '<p>Data added to table:</p>';
-
     echo '<pre>';
     $results = $db->query("SELECT * FROM walk");
-    while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-        var_dump($row);
+
+    echo "<table border='1'>
+    <tr>
+    <th>Walk Name</th>
+    <th>Walk Date</th>
+    <th>Start Time</th>
+    <th>Leader</th>
+    <th>Meeting Point</th>
+    <th>Meeting Lat/Long</th>
+    <th>Distance</th>
+    <th>Route</th>
+    <th>Notes</th>
+    <th>Status</th>
+    </tr>
+
+
+    "; // start a table tag in the HTML
+
+    while($row =  $results->fetchArray(SQLITE3_ASSOC)){   //Creates a loop to loop through results
+    echo "
+    <tr>
+    <td>" . $row['name'] . "</td>
+    <td>" . $row['walk_date'] . "</td>
+    <td>" . $row['start_time'] . "</td>
+    <td>" . $row['leader'] . "</td>
+    <td>" . $row['meeting_point'] . "</td>
+    <td>" . $row['meeting_latlong'] . "</td>
+    <td>" . $row['distance'] . "</td>
+    <td>" . $row['route'] . "</td>
+    <td>" . $row['notes'] . "</td>
+    <td>" . $row['status'] . "</td>
+    </tr>";  //$row['index'] the index here is a field name
     }
-    echo '</pre>';
+
+    echo "</table>"; //Close the table in HTML
+
 
     ?>
   </div>
