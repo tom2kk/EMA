@@ -59,6 +59,10 @@ a:link{
   padding-right: 8px;
 }
 
+#return-white-bg{
+  color: #2C3E50;
+}
+
 a:hover{
   color: #18BC9C;
 }
@@ -220,4 +224,25 @@ form > label {
   input{
     width:auto;
   }
+}
+
+table{
+  border: 1px solid #2C3E50;
+  border-radius: 5px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th{
+  background-color: #2C3E50;
+  color: white;
+  font-weight: bold;
+  border-collapse: collapse;
+  border: 1px solid #2C3E50;
+}
+
+td{
+  height: auto;
+  border: 1px solid #2C3E50;
+  border-collapse: collapse;
 }

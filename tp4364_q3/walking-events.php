@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
   <script src="script.js"></script>
   <title>Walking Events</title>
@@ -49,8 +49,51 @@
 
 
       <div id="view-display-content">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad incidunt ipsum perspiciatis soluta, porro repudiandae impedit commodi ex iure quod suscipit laudantium aut culpa aliquam a quae aperiam, doloribus similique, deserunt placeat autem! Eveniet beatae, velit ex obcaecati porro corrupti veritatis ipsam delectus, dolor, perspiciatis quam a praesentium, cum dolore!
+        <?php
+        $database_name = "walkingclub.sqlite";
+        $db = new SQLite3($database_name);
 
+        $results = $db->query("SELECT * FROM walk");
+
+        echo "<table>
+        <tr>
+        <th>Walk Name</th>
+        <th>Walk Date</th>
+        <th>Start Time</th>
+        <th>Leader</th>
+        <th>Meeting Point</th>
+        <th>Meeting Lat/Long</th>
+        <th>Distance</th>
+        <th>Route</th>
+        <th>Notes</th>
+        <th>Status</th>
+        </tr>";
+
+        while($row =  $results->fetchArray(SQLITE3_ASSOC)){
+        echo "
+        <tr>
+        <td>" . $row['name'] . "</td>
+        <td>" . $row['walk_date'] . "</td>
+        <td>" . $row['start_time'] . "</td>
+        <td>" . $row['leader'] . "</td>
+        <td>" . $row['meeting_point'] . "</td>
+        <td>" . $row['meeting_latlong'] . "</td>
+        <td>" . $row['distance'] . "</td>
+        <td>" . $row['route'] . "</td>
+        <td>" . $row['notes'] . "</td>
+        <td>" . $row['status'] . "</td>
+        </tr>";
+        }
+
+        echo "</table>";
+        ?>
+        <br><br>
+        <form id="form" action="filter.php" method="get">
+        <label>Filter events within # days:</label>
+        <input type="text" name="filter" value="">
+        <br><br>
+        <input class="submit" type="submit" value="Submit">
+        </form>
       </div>
     </div>
 
