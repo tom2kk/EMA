@@ -45,20 +45,17 @@
       $filter = $_GET['filter'];
     }
 
-
     if($filter < 0){
-      $query = "select * from walk where walk_date between (date('now')+$filter) AND date('now');";
+      $query = "select * from walk where walk_date between (date('now')+:filter) AND date('now');";
     }elseif($filter > 0){
-      $query = "select * from walk where walk_date between date('now') and (date('now')+$filter);";
+      $query = "select * from walk where walk_date between date('now') and (date('now')+:filter);";
     }else{
       $query = "select * from walk where walk_date = date('now');";
     }
 
-
-
-
-    $results = $db->query($query);
-
+    $stmt = $db->prepare($query);
+    $stmt->bindParam(':filter', $filter);
+    $results = $stmt->execute();
 
     echo "<table>
     <tr>

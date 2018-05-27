@@ -52,8 +52,21 @@
       $notes = $_POST['notes'];
       $status = $_POST['status'];
     }
-    $sql= "INSERT INTO `walk`(`name`,`walk_date`,`start_time`,`leader`,`meeting_point`,`meeting_latlong`,`distance`,`route`,`notes`,`status`) VALUES ('$walkname','$walkdate','$starttime','$leader','$meetingpoint','$meetinglatlong','$distance','$route','$notes','$status');";
-    $db->exec($sql) or die('Add data failed');
+    $sql= "INSERT INTO `walk`(`name`,`walk_date`,`start_time`,`leader`,`meeting_point`,`meeting_latlong`,`distance`,`route`,`notes`,`status`) VALUES (:walkname,:walkdate,:starttime,:leader,:meetingpoint,:meetinglatlong,:distance,:route,:notes,:status);";
+
+    $stmt = $db->prepare( $sql );
+    $stmt->bindValue(':walkname' ,$walkname);
+    $stmt->bindValue(':walkdate',$walkdate);
+    $stmt->bindValue(':starttime' ,$starttime);
+    $stmt->bindValue(':leader',$leader);
+    $stmt->bindValue(':meetingpoint',$meetingpoint);
+    $stmt->bindValue(':meetinglatlong',$meetinglatlong);
+    $stmt->bindValue(':distance',$distance);
+    $stmt->bindValue(':route',$route);
+    $stmt->bindValue(':notes',$notes);
+    $stmt->bindValue(':status',$status);
+    $results = $stmt->execute();
+
     echo '<p>Data added to table</p><br>
     Click
     <a id="return-white-bg" href="walking-events.php">here</a>
