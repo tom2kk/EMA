@@ -74,16 +74,16 @@
     while($row =  $results->fetchArray(SQLITE3_ASSOC)){
     echo "
     <tr>
-    <td>" . $row['name'] . "</td>
-    <td>" . $row['walk_date'] . "</td>
-    <td>" . $row['start_time'] . "</td>
-    <td>" . $row['leader'] . "</td>
-    <td>" . $row['meeting_point'] . "</td>
-    <td>" . $row['meeting_latlong'] . "</td>
-    <td>" . $row['distance'] . "</td>
-    <td>" . $row['route'] . "</td>
-    <td>" . $row['notes'] . "</td>
-    <td>" . $row['status'] . "</td>
+    <td>" . htmlspecialchars($row['name']) . "</td>
+    <td>" . htmlspecialchars($row['walk_date']) . "</td>
+    <td>" . htmlspecialchars($row['start_time']) . "</td>
+    <td>" . htmlspecialchars($row['leader']) . "</td>
+    <td>" . htmlspecialchars($row['meeting_point']) . "</td>
+    <td>" . htmlspecialchars($row['meeting_latlong']) . "</td>
+    <td>" . htmlspecialchars($row['distance']) . "</td>
+    <td>" . htmlspecialchars($row['route']) . "</td>
+    <td>" . htmlspecialchars($row['notes']) . "</td>
+    <td>" . htmlspecialchars($row['status']) . "</td>
     </tr>";
     }
 
