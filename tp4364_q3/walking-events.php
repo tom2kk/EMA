@@ -90,7 +90,7 @@
         <br><br>
         <form id="form" action="filter.php" method="get">
         <label>Filter events within # days:</label>
-        <input type="text" name="filter" value="">
+        <input type="number" name="filter" value="">
         <br><br>
         <input class="submit" type="submit" value="Submit">
         </form>
